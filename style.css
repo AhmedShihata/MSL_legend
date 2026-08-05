@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+    background-color: var(--backgroundColor);
+
+}
+:root{
+    --mainColor:rgb(143, 162, 138);
+    --secondColor:rgb(199, 211, 192);
+    --hoverColor:rgb(247, 244, 237);
+    --thiredColor:rgb(200, 169, 107);
+    --backColor: #f4f4f4;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./img/pexels-rachel-claire-5864245.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.header .overlay{
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(196, 212, 229, 0.423);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    text-align: center;
+}
+.header .overlay h1{
+    color: var(--thiredColor);
+    font-size:2.5em ;
+    margin-bottom: 20px;
+}
+.header .overlay .name{
+    color: var(--mainColor);
+}
+.header .overlay a{
+    background-color: var(--hoverColor);
+    color: var(--mainColor);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 0 20px;
+    transition: all 2s;
+}
+.header .overlay a:hover{
+    background-color: var(--secondColor);
+    color: var(--thiredColor);
+    scale: 1.2;
+}
+@media screen and (max-width:1024px){
+.header .overlay{
+    font-size: 15px;
+}
+}
+@media screen and (max-width:740px){
+.header .overlay{
+    font-size: 12px;
+}
+}
+
+/* about */
+
+.about{
+    width: 100%;
+    font-size: 20px;
+    margin: 200px 0px 200px 0px;
+    padding: 18px;
+    position: relative;
+}
+.about .p {
+    margin: 10px;
+    padding: 18px;
+    width: 60%;
+}
+.about .p h2{
+    font-size: 1.5em;
+    padding: 5px;
+    color: var(--mainColor);
+    font-weight: bold;
+}
+.about .p p{
+    margin: 10px;
+    padding-left: 30px;
+    font-size: .9em;
+}
+.about .aimg img{
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 100px;
+    border-radius: 0 30px;
+}
+
+/* Servies */
+
+.servies{
+    width: 100%;
+    font-size: 20px;
+    margin: 50px auto;
+    padding: 18px;
+    
+}
+.servies h2{
+    font-size: 1.5em;
+    padding: 10px;
+    color: var(--secondColor);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.servies .servies-item{
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(3,35%);
+    grid-template-areas: "s1 s2 s3" 
+                         "s4 s5 s6"
+                         "s7 s8 s9";
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    gap: 20px;
+}
+.servies img{
+    width: 100%;
+    height: 450px;
+}
+.servies .servies-item .s1{
+    grid-area: s1;
+    position: relative;
+}
+.servies .servies-item .d{
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    text-decoration: none;
+    background-color: var(--secondColor);
+    color: var(--thiredColor);
+    font-size: .8em;
+    padding: 10px;
+    transition: all 2s;
+    border-radius: 0 20px;
+    font-weight: bold;   
+}
+.servies .servies-item .d:hover{
+    background-color: var(--hoverColor);
+    color: var(--mainColor);
+    scale: 1.1;
+}
+.servies .servies-item .p{
+    position: absolute;
+    bottom: 80px;
+    left: 240px;
+    text-decoration: none;
+    background-color: var(--secondColor);
+    color: var(--thiredColor);
+    font-size: .8em;
+    padding: 10px;
+    transition: all 2s;
+    border-radius: 0 20px;
+    font-weight: bold;
+}
+.servies .servies-item .p:hover{
+    background-color: var(--hoverColor);
+    color: var(--mainColor);
+    scale: 1.1;
+}
+
+.servies .servies-item .s2{
+    grid-area: s2;
+    position: relative;
+}
+.servies .servies-item .s3{
+    grid-area: s3;
+    position: relative;
+}
+.servies .servies-item .s4{
+    grid-area: s4;
+    position: relative;
+}
+.servies .servies-item .s5{
+    grid-area: s5;
+    position: relative;
+}
+.servies .servies-item .s6{
+    grid-area: s6;
+    position: relative;
+}
+.servies .servies-item .s7{
+    grid-area: s7;
+    position: relative;
+}
+.servies .servies-item .s8{
+    grid-area: s8;
+    position: relative;
+}
+.servies .servies-item .s9{
+    grid-area: s9;
+    position: relative;
+}
+
+/* contact */
+
+.contact{
+    margin: 150px 0 0;
+    width: 100%;
+    font-size: 20px;
+    padding: 18px;
+    background-color: var(--thiredColor);
+    
+}
+.contact .items{
+    margin: 10px auto;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.contact .items h2{
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    color: var(--secondColor);
+    font-weight: bold;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contact .items ol{
+    text-align: center;
+    color: var(--hoverColor);
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
